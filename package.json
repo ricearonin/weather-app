@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ricearonin/weather-app/issues"
   },
-  "homepage": "https://github.com/ricearonin/weather-app#readme"
+  "homepage": "https://github.com/ricearonin/weather-app#readme",
+  "dependencies": {
+    "yargs": "^4.8.1"
+  }
 }
