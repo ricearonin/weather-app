@@ -2,6 +2,7 @@ var asyncAdd = (a, b) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (typeof a === 'number' && typeof b === 'number') {
+        console.log('async add', a + b);
         resolve(a + b);
       } else {
         reject('Arguments must be numbers');
@@ -10,14 +11,16 @@ var asyncAdd = (a, b) => {
   });
 };
 
-asyncAdd(5, 'pumpkin').then(
-  res => {
-    console.log('Result:', res);
-  },
-  errorMessage => {
+asyncAdd(5, '7')
+  .then(res => {
+    return asyncAdd(res, 33);
+  })
+  .then(res => {
+    console.log('Should be 45', res);
+  })
+  .catch(errorMessage => {
     console.log(errorMessage);
-  },
-);
+  });
 
 // var somePromise = new Promise((resolve, reject) => {
 //   setTimeout(() => {
