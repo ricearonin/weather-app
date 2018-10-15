@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ricearonin/weather-app#readme",
   "dependencies": {
+    "axios": "^0.13.1",
     "yargs": "^4.8.1"
   }
 }
